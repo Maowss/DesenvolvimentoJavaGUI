@@ -68,7 +68,7 @@
                       </Group>
                   </Group>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="txtEmailFuncionario" alignment="0" max="32767" attributes="0"/>
+                      <Component id="txtEmailFuncionario" alignment="0" pref="490" max="32767" attributes="0"/>
                       <Component id="txtRGFuncionario" alignment="0" max="32767" attributes="0"/>
                       <Component id="txtCPFFuncionario" alignment="0" max="32767" attributes="0"/>
                       <Component id="txtTelefoneFuncionario" alignment="1" max="32767" attributes="0"/>
@@ -112,7 +112,7 @@
                       <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="txtEnderecoFuncionario" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="39" max="32767" attributes="0"/>
+                  <EmptySpace pref="42" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>

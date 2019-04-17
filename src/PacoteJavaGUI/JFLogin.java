@@ -123,18 +123,28 @@ public class JFLogin extends javax.swing.JFrame {
 //        frame.setVisible(true);
 //        this.dispose();
 
-        String nomeUsuario = txtUsuario.getText();
-        String senhaUsuario = txtSenha.getText();
-
-        if (nomeUsuario.equals("admin") && senhaUsuario.equals("admin")) {
-            JOptionPane.showMessageDialog(null, "Bem vindo");
+        if (txtUsuario.getText().equals("etecia") && txtSenha.getText().equals("admin")) {
+            JOptionPane.showMessageDialog(null, "Bem Vindo ao Sistema!");
             JFMenuPrincipal open = new JFMenuPrincipal();
             open.setVisible(true);
-//          this.dispose();
+            this.dispose();
             this.setVisible(false);
         } else {
-            JOptionPane.showMessageDialog(null, "Usuario ou senha errados");
+            JOptionPane.showMessageDialog(null, "Usuario ou Senha Incorreta!");
         }
+
+//        String nomeUsuario = txtUsuario.getText();
+//        String senhaUsuario = txtSenha.getText();
+//
+//        if (nomeUsuario.equals("admin") && senhaUsuario.equals("admin")) {
+//            JOptionPane.showMessageDialog(null, "Bem vindo");
+//            JFMenuPrincipal open = new JFMenuPrincipal();
+//            open.setVisible(true);
+////          this.dispose();
+//            this.setVisible(false);
+//        } else {
+//            JOptionPane.showMessageDialog(null, "Usuario ou senha errados");
+//        }
 
     }//GEN-LAST:event_btnEntrarActionPerformed
 

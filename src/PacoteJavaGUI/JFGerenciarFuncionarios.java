@@ -4,6 +4,8 @@ import javax.swing.JOptionPane;
 
 public class JFGerenciarFuncionarios extends javax.swing.JFrame {
 
+    Funcionarios novo = new Funcionarios();
+    
     public JFGerenciarFuncionarios() {
         initComponents();
     }
@@ -107,7 +109,7 @@ public class JFGerenciarFuncionarios extends javax.swing.JFrame {
                             .addComponent(jLabel1))
                         .addGap(57, 57, 57)))
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtEmailFuncionario)
+                    .addComponent(txtEmailFuncionario, javax.swing.GroupLayout.DEFAULT_SIZE, 490, Short.MAX_VALUE)
                     .addComponent(txtRGFuncionario)
                     .addComponent(txtCPFFuncionario)
                     .addComponent(txtTelefoneFuncionario, javax.swing.GroupLayout.Alignment.TRAILING)
@@ -142,7 +144,7 @@ public class JFGerenciarFuncionarios extends javax.swing.JFrame {
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
                     .addComponent(txtEnderecoFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(39, Short.MAX_VALUE))
+                .addContainerGap(42, Short.MAX_VALUE))
         );
 
         jPanel5.setBackground(new java.awt.Color(0, 0, 0));
@@ -273,15 +275,18 @@ public class JFGerenciarFuncionarios extends javax.swing.JFrame {
     }//GEN-LAST:event_txtRGFuncionarioActionPerformed
 
     private void btnNovoFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNovoFuncionarioActionPerformed
-        String nomeFuncionario = txtNomeFuncionario.getText();
-        String emailFuncionario = txtEmailFuncionario.getText();
-        String rgFuncionario = txtRGFuncionario.getText();
-        String cpfFuncionario = txtCPFFuncionario.getText();
-        String telefoneFuncionario = txtTelefoneFuncionario.getText();
-        String enderecoFuncionario = txtEnderecoFuncionario.getText();
+//        String nomeFuncionario = txtNomeFuncionario.getText();
+//        String emailFuncionario = txtEmailFuncionario.getText();
+//        String rgFuncionario = txtRGFuncionario.getText();
+//        String cpfFuncionario = txtCPFFuncionario.getText();
+//        String telefoneFuncionario = txtTelefoneFuncionario.getText();
+//        String enderecoFuncionario = txtEnderecoFuncionario.getText();
 
-        if (nomeFuncionario.equals("") || emailFuncionario.equals("") || rgFuncionario.equals("")
-                || cpfFuncionario.equals("") || telefoneFuncionario.equals("") || enderecoFuncionario.equals("")) {
+        //Funcionarios novo = new Funcionarios();
+
+        if (novo.getNomeFuncionario().equals("") || novo.getEmailFuncionario().equals("") 
+                || novo.getRgFuncionario().equals("") || novo.getCpfFuncionario().equals("") 
+                || novo.getTelefoneFuncionario().equals("") || novo.getEnderecoFuncionario().equals("")) {
             JOptionPane.showMessageDialog(null, "Um dos campos ainda esta em branco");
         } else {
             JOptionPane.showMessageDialog(null, "Cadastro realizado com sucesso");
@@ -295,28 +300,51 @@ public class JFGerenciarFuncionarios extends javax.swing.JFrame {
     }//GEN-LAST:event_btnNovoFuncionarioActionPerformed
 
     private void btnVoltarFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarFuncionarioActionPerformed
-       JFMenuPrincipal voltarFMenu = new JFMenuPrincipal();
+        JFMenuPrincipal voltarFMenu = new JFMenuPrincipal();
         voltarFMenu.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnVoltarFuncionarioActionPerformed
 
     private void btnExcluirFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExcluirFuncionarioActionPerformed
-  
+
         JOptionPane.showMessageDialog(null, "Limpo com sucesso");
+        txtNomeFuncionario.setText("");
+        txtEmailFuncionario.setText("");
+        txtRGFuncionario.setText("");
+        txtCPFFuncionario.setText("");
+        txtTelefoneFuncionario.setText("");
+        txtEnderecoFuncionario.setText("");
+    }//GEN-LAST:event_btnExcluirFuncionarioActionPerformed
+
+    private void btnInserirFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInserirFuncionarioActionPerformed
+
+        if (novo.getNomeFuncionario().equals("") || novo.getEmailFuncionario().equals("") || novo.getRgFuncionario().equals("")
+                || novo.getCpfFuncionario().equals("") || novo.getTelefoneFuncionario().equals("")
+                || novo.getEnderecoFuncionario().equals("")) {
+            JOptionPane.showMessageDialog(null, "Um dos campos ainda esta em branco");
+        } else {
+            JOptionPane.showMessageDialog(null, "Inserido com sucesso");
             txtNomeFuncionario.setText("");
             txtEmailFuncionario.setText("");
             txtRGFuncionario.setText("");
             txtCPFFuncionario.setText("");
             txtTelefoneFuncionario.setText("");
             txtEnderecoFuncionario.setText("");
-    }//GEN-LAST:event_btnExcluirFuncionarioActionPerformed
+        }
 
-    private void btnInserirFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInserirFuncionarioActionPerformed
-        JOptionPane.showMessageDialog(null, "Inserido com sucesso");
+//        JOptionPane.showMessageDialog(null, "Inserido com sucesso");
+//        txtNomeFuncionario.setText("");
+//        txtEmailFuncionario.setText("");
+//        txtRGFuncionario.setText("");
+//        txtCPFFuncionario.setText("");
+//        txtTelefoneFuncionario.setText("");
+//        txtEnderecoFuncionario.setText("");
     }//GEN-LAST:event_btnInserirFuncionarioActionPerformed
 
     private void btnAlterarFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAlterarFuncionarioActionPerformed
+
         JOptionPane.showMessageDialog(null, "Alterado com sucesso");
+
     }//GEN-LAST:event_btnAlterarFuncionarioActionPerformed
 
     /**
