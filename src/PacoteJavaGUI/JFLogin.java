@@ -125,7 +125,7 @@ public class JFLogin extends javax.swing.JFrame {
 
         if (txtUsuario.getText().equals("etecia") && txtSenha.getText().equals("admin")) {
             JOptionPane.showMessageDialog(null, "Bem Vindo ao Sistema!");
-            JFMenuPrincipal open = new JFMenuPrincipal();
+            JFMenuPrincipal open = new JFMenuPrincipal(txtUsuario.getText());
             open.setVisible(true);
             this.dispose();
             this.setVisible(false);
@@ -133,6 +133,8 @@ public class JFLogin extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Usuario ou Senha Incorreta!");
         }
 
+//--------------------------------------------------------------------------------------------------------//     
+        
 //        String nomeUsuario = txtUsuario.getText();
 //        String senhaUsuario = txtSenha.getText();
 //
@@ -145,6 +147,27 @@ public class JFLogin extends javax.swing.JFrame {
 //        } else {
 //            JOptionPane.showMessageDialog(null, "Usuario ou senha errados");
 //        }
+        
+//--------------------------------------------------------------------------------------------------------//
+
+//        String login = txtUsuario.getText();
+//        String senha = txtSenha.getText();
+//        
+//                
+//        JOptionPane.showMessageDialog(null,"Validado? "+validarUsuarios(login, senha));
+//    }                                         
+//
+//    public boolean validarUsuarios(String login,String senha){
+//        if (login.equals("etecia")&&senha.equals("etecia")) {
+//            return true;
+//        }
+//        else
+//        {
+//            return false;
+//        }
+//    }
+
+//--------------------------------------------------------------------------------------------------------//
 
     }//GEN-LAST:event_btnEntrarActionPerformed
 

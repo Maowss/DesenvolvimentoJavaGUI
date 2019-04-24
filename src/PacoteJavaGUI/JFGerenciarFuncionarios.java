@@ -24,9 +24,9 @@ public class JFGerenciarFuncionarios extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         txtRGFuncionario = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
-        txtCPFFuncionario = new javax.swing.JTextField();
         txtTelefoneFuncionario = new javax.swing.JTextField();
         txtEnderecoFuncionario = new javax.swing.JTextField();
+        txtCPFFuncionario = new javax.swing.JFormattedTextField();
         jPanel5 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
@@ -72,8 +72,6 @@ public class JFGerenciarFuncionarios extends javax.swing.JFrame {
         jLabel6.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel6.setText("Email");
 
-        txtCPFFuncionario.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-
         txtTelefoneFuncionario.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         txtTelefoneFuncionario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -87,6 +85,8 @@ public class JFGerenciarFuncionarios extends javax.swing.JFrame {
                 txtEnderecoFuncionarioActionPerformed(evt);
             }
         });
+
+        txtCPFFuncionario.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("###-###-###-##"))));
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -111,10 +111,10 @@ public class JFGerenciarFuncionarios extends javax.swing.JFrame {
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(txtEmailFuncionario, javax.swing.GroupLayout.DEFAULT_SIZE, 490, Short.MAX_VALUE)
                     .addComponent(txtRGFuncionario)
-                    .addComponent(txtCPFFuncionario)
                     .addComponent(txtTelefoneFuncionario, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(txtEnderecoFuncionario, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(txtNomeFuncionario))
+                    .addComponent(txtNomeFuncionario)
+                    .addComponent(txtCPFFuncionario))
                 .addGap(43, 43, 43))
         );
         jPanel4Layout.setVerticalGroup(
@@ -133,10 +133,10 @@ public class JFGerenciarFuncionarios extends javax.swing.JFrame {
                     .addComponent(jLabel3)
                     .addComponent(txtRGFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(txtCPFFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(txtCPFFuncionario))
+                .addGap(18, 20, Short.MAX_VALUE)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(txtTelefoneFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -144,7 +144,7 @@ public class JFGerenciarFuncionarios extends javax.swing.JFrame {
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
                     .addComponent(txtEnderecoFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(42, Short.MAX_VALUE))
+                .addGap(44, 44, 44))
         );
 
         jPanel5.setBackground(new java.awt.Color(0, 0, 0));
@@ -398,7 +398,7 @@ public class JFGerenciarFuncionarios extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
-    private javax.swing.JTextField txtCPFFuncionario;
+    private javax.swing.JFormattedTextField txtCPFFuncionario;
     private javax.swing.JTextField txtEmailFuncionario;
     private javax.swing.JTextField txtEnderecoFuncionario;
     private javax.swing.JTextField txtNomeFuncionario;

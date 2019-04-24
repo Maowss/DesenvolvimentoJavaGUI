@@ -9,6 +9,8 @@ public class JFGerenciarProdutos extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        bgSolicitaçãoCompra = new javax.swing.ButtonGroup();
+        bgAtualizaEstoque = new javax.swing.ButtonGroup();
         panelProdutos = new javax.swing.JPanel();
         lblDescricao = new javax.swing.JLabel();
         lblCategoria = new javax.swing.JLabel();
@@ -22,8 +24,8 @@ public class JFGerenciarProdutos extends javax.swing.JFrame {
         txtCodBarras = new javax.swing.JTextField();
         lblReferencia = new javax.swing.JLabel();
         txtReferencia = new javax.swing.JTextField();
-        btnCompraSim = new javax.swing.JRadioButton();
-        btnCompraNao = new javax.swing.JRadioButton();
+        cbCompraSim = new javax.swing.JRadioButton();
+        cbCompraNao = new javax.swing.JRadioButton();
         lblSolicitacaoCompra = new javax.swing.JLabel();
         lblAtualizaEstoque = new javax.swing.JLabel();
         btnEstoqueSim = new javax.swing.JRadioButton();
@@ -71,21 +73,23 @@ public class JFGerenciarProdutos extends javax.swing.JFrame {
 
         txtReferencia.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
 
-        btnCompraSim.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        btnCompraSim.setForeground(new java.awt.Color(0, 153, 0));
-        btnCompraSim.setText("Sim");
-        btnCompraSim.addActionListener(new java.awt.event.ActionListener() {
+        bgSolicitaçãoCompra.add(cbCompraSim);
+        cbCompraSim.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        cbCompraSim.setForeground(new java.awt.Color(0, 153, 0));
+        cbCompraSim.setText("Sim");
+        cbCompraSim.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCompraSimActionPerformed(evt);
+                cbCompraSimActionPerformed(evt);
             }
         });
 
-        btnCompraNao.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        btnCompraNao.setForeground(new java.awt.Color(255, 0, 0));
-        btnCompraNao.setText("Não");
-        btnCompraNao.addActionListener(new java.awt.event.ActionListener() {
+        bgSolicitaçãoCompra.add(cbCompraNao);
+        cbCompraNao.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        cbCompraNao.setForeground(new java.awt.Color(255, 0, 0));
+        cbCompraNao.setText("Não");
+        cbCompraNao.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCompraNaoActionPerformed(evt);
+                cbCompraNaoActionPerformed(evt);
             }
         });
 
@@ -95,6 +99,7 @@ public class JFGerenciarProdutos extends javax.swing.JFrame {
         lblAtualizaEstoque.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         lblAtualizaEstoque.setText("Atualiza Estoque");
 
+        bgAtualizaEstoque.add(btnEstoqueSim);
         btnEstoqueSim.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         btnEstoqueSim.setForeground(new java.awt.Color(51, 153, 0));
         btnEstoqueSim.setText("Sim");
@@ -104,6 +109,7 @@ public class JFGerenciarProdutos extends javax.swing.JFrame {
             }
         });
 
+        bgAtualizaEstoque.add(btnEstoqueNao);
         btnEstoqueNao.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         btnEstoqueNao.setForeground(new java.awt.Color(255, 0, 51));
         btnEstoqueNao.setText("Não");
@@ -151,10 +157,10 @@ public class JFGerenciarProdutos extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btnEstoqueNao))
                     .addGroup(panelProdutosLayout.createSequentialGroup()
-                        .addComponent(btnCompraSim)
+                        .addComponent(cbCompraSim)
                         .addGap(10, 10, 10)
-                        .addComponent(btnCompraNao)))
-                .addContainerGap(89, Short.MAX_VALUE))
+                        .addComponent(cbCompraNao)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panelProdutosLayout.setVerticalGroup(
             panelProdutosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -171,8 +177,8 @@ public class JFGerenciarProdutos extends javax.swing.JFrame {
                             .addComponent(txtCategoria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(panelProdutosLayout.createSequentialGroup()
                         .addGroup(panelProdutosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btnCompraSim)
-                            .addComponent(btnCompraNao)
+                            .addComponent(cbCompraSim)
+                            .addComponent(cbCompraNao)
                             .addComponent(lblSolicitacaoCompra))
                         .addGap(18, 18, 18)
                         .addGroup(panelProdutosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -273,10 +279,7 @@ public class JFGerenciarProdutos extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(panelTitulo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(panelBotoes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(panelProdutos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(panelProdutos, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -306,13 +309,13 @@ public class JFGerenciarProdutos extends javax.swing.JFrame {
         
     }//GEN-LAST:event_txtDescricaoActionPerformed
 
-    private void btnCompraSimActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCompraSimActionPerformed
+    private void cbCompraSimActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbCompraSimActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnCompraSimActionPerformed
+    }//GEN-LAST:event_cbCompraSimActionPerformed
 
-    private void btnCompraNaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCompraNaoActionPerformed
+    private void cbCompraNaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbCompraNaoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnCompraNaoActionPerformed
+    }//GEN-LAST:event_cbCompraNaoActionPerformed
 
     private void btnEstoqueSimActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEstoqueSimActionPerformed
         // TODO add your handling code here:
@@ -359,12 +362,14 @@ public class JFGerenciarProdutos extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JRadioButton btnCompraNao;
-    private javax.swing.JRadioButton btnCompraSim;
+    private javax.swing.ButtonGroup bgAtualizaEstoque;
+    private javax.swing.ButtonGroup bgSolicitaçãoCompra;
     private javax.swing.JRadioButton btnEstoqueNao;
     private javax.swing.JRadioButton btnEstoqueSim;
     private javax.swing.JButton btnSalvarProduto;
     private javax.swing.JButton btnVoltarMenu;
+    private javax.swing.JRadioButton cbCompraNao;
+    private javax.swing.JRadioButton cbCompraSim;
     private javax.swing.JLabel lblAtualizaEstoque;
     private javax.swing.JLabel lblCategoria;
     private javax.swing.JLabel lblCodInterno;
