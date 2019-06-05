@@ -2,7 +2,7 @@ package PacoteJavaGUI;
 
 public class Produtos {
     private String nome, quantidade, preco, codBarra, tipoProduto;
-
+    
     public String getNome() {
         return nome;
     }
