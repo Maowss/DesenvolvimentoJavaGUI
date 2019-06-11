@@ -231,6 +231,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Sim"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cbCompraSimActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JRadioButton" name="cbCompraNao">
           <Properties>
@@ -245,6 +248,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="N&#xe3;o"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cbCompraNaoActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="lblSolicitacaoCompra">
           <Properties>

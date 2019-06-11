@@ -57,7 +57,6 @@ public class ProdutosDAO {
             ps.setString(4, produtos.getTipoProduto());
             ps.setString(5, produtos.getCodBarra());
             
-
             if (ps.executeUpdate() > 0) {
                 return "Produto alterado com sucesso";
             } else {

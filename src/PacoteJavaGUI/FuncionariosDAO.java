@@ -47,8 +47,8 @@ public class FuncionariosDAO {
     }
 
     public String alterar(Funcionarios funcionarios) {
-        String sql = "update funcionarios set nome = ?, email = ?, rg = ?, telefone = ?, emdereco = ?";
-        sql += "where cpf = ?";
+        String sql = "update funcionarios set nome =?,email = ?,rg = ?,telefone = ?,endereco = ?";
+        sql += "where cpf =?";
 
         try {
             PreparedStatement ps = getCon().prepareStatement(sql);
@@ -56,12 +56,12 @@ public class FuncionariosDAO {
             ps.setString(1, funcionarios.getNomeFuncionario());
             ps.setString(2, funcionarios.getEmailFuncionario());
             ps.setString(3, funcionarios.getRgFuncionario());
-            ps.setString(4, funcionarios.getCpfFuncionario());
-            ps.setString(5, funcionarios.getTelefoneFuncionario());
-            ps.setString(6, funcionarios.getEnderecoFuncionario());
+            ps.setString(4, funcionarios.getTelefoneFuncionario());
+            ps.setString(5, funcionarios.getEnderecoFuncionario());
+            ps.setString(6, funcionarios.getCpfFuncionario());
 
             if (ps.executeUpdate() > 0) {
-                return "funcionario alterado com sucesso";
+                return "Funcionario alterado com sucesso";
             } else {
                 return "Erro ao alterar o funcionario";
             }

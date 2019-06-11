@@ -61,11 +61,21 @@ public class JFGerenciarProdutos extends javax.swing.JFrame {
         cbCompraSim.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         cbCompraSim.setForeground(new java.awt.Color(0, 153, 0));
         cbCompraSim.setText("Sim");
+        cbCompraSim.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbCompraSimActionPerformed(evt);
+            }
+        });
 
         bgSolicitaçãoCompra.add(cbCompraNao);
         cbCompraNao.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         cbCompraNao.setForeground(new java.awt.Color(255, 0, 0));
         cbCompraNao.setText("Não");
+        cbCompraNao.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbCompraNaoActionPerformed(evt);
+            }
+        });
 
         lblSolicitacaoCompra.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         lblSolicitacaoCompra.setText("Solicitação Compra");
@@ -348,6 +358,14 @@ public class JFGerenciarProdutos extends javax.swing.JFrame {
     private void btnVoltarMenuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnVoltarMenuMouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_btnVoltarMenuMouseClicked
+
+    private void cbCompraSimActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbCompraSimActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cbCompraSimActionPerformed
+
+    private void cbCompraNaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbCompraNaoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cbCompraNaoActionPerformed
 
     public static void main(String args[]) {
 

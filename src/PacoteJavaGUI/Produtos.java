@@ -1,7 +1,7 @@
 package PacoteJavaGUI;
 
 public class Produtos {
-    private String nome, quantidade, preco, codBarra, tipoProduto;
+    private String nome, quantidade, preco, codBarra, tipoProduto, solicitaCompra;
     
     public String getNome() {
         return nome;

@@ -4,9 +4,6 @@ package PacoteJavaGUI;
 public class Funcionarios {
     private String nomeFuncionario, emailFuncionario, rgFuncionario, cpfFuncionario, 
             telefoneFuncionario, enderecoFuncionario;
-
-    public Funcionarios() {
-    }
     
     public String getNomeFuncionario() {
         return nomeFuncionario;
@@ -54,9 +51,6 @@ public class Funcionarios {
 
     public void setEnderecoFuncionario(String enderecoFuncionario) {
         this.enderecoFuncionario = enderecoFuncionario;
-    }
-   
-     
-    
+    }   
     
 }
